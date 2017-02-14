@@ -1,21 +1,18 @@
-import React, { Component } from 'react';
-import Logo from '../Logo/Logo.jsx';
-import './App.css';
+import React from 'react'
+import Logo from '../Logo/Logo.jsx'
+import Game from '../Game/Game.jsx'
+import './App.css'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <Logo />
-          <p className="App-title">TODO: React + Redux</p>
-        </div>
-        <p className="App-content">
-          // Todo list goes here
-        </p>
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div className="App">
+    <div className="App-header">
+      <Logo />
+      <p className="App-title">React + Redux</p>
+    </div>
+    <div className="App-content">
+      <Game />
+    </div>
+  </div>
+)
 
-export default App;
+export default App

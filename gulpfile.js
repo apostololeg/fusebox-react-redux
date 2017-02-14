@@ -17,20 +17,18 @@ let fuseBox = new fsbx.FuseBox({
         fsbx.BabelPlugin({
             config: {
                 sourceMaps: true,
-                presets: ['latest'],
+                presets: ['latest', 'stage-2'],
                 plugins: [
-                    ['transform-react-jsx']
+                    ['transform-react-jsx', 'transform-object-rest-spread']
                 ]
             }
         })
     ]
 });
 
-gulp.task('build', () => {
-    return fuseBox.bundle('>./components/index/index.jsx +react-dom');
-})
+gulp.task('build', () => fuseBox.bundle('>index.jsx +react-dom'));
 
-gulp.task('start', ['build'], function() {
+gulp.task('start', ['build'], () => {
     gulp.src('build')
         .pipe(server({
             livereload: {

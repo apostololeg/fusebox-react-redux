@@ -1,0 +1,26 @@
+.Bin {
+    display: inline-block;
+    height: 132px;
+    width: 132px;
+    padding: 10px;
+    margin: 10px;
+    transition: opacity .1s ease-out;
+    border: 2px dashed;
+    transform: rotateX(180deg);
+}
+
+.Bin_locked {
+    position: relative;
+    pointer-events: none;
+    opacity: .3;
+}
+
+.Bin_full {
+    border-style: solid;
+}
+
+.Bin_completed {
+    border-style: solid;
+    border-color: #34d274;
+    background-color: #ccffe1;
+}

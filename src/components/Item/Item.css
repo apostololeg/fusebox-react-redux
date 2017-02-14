@@ -1,0 +1,18 @@
+.Item {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    margin: 3px 5px;
+    cursor: pointer;
+}
+
+.Item_color_black {
+    background-color: #000;
+}
+
+.Item:hover {
+    box-shadow: 0 0 0 2px #36d1dd;
+}
+
